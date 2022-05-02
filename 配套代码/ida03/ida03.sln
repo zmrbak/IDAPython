@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32422.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ida03", "ida03\ida03.vcxproj", "{B37940A0-307A-49FA-9AE7-DC71C6E21052}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B37940A0-307A-49FA-9AE7-DC71C6E21052}.Debug|x64.ActiveCfg = Debug|x64
+		{B37940A0-307A-49FA-9AE7-DC71C6E21052}.Debug|x64.Build.0 = Debug|x64
+		{B37940A0-307A-49FA-9AE7-DC71C6E21052}.Debug|x86.ActiveCfg = Debug|Win32
+		{B37940A0-307A-49FA-9AE7-DC71C6E21052}.Debug|x86.Build.0 = Debug|Win32
+		{B37940A0-307A-49FA-9AE7-DC71C6E21052}.Release|x64.ActiveCfg = Release|x64
+		{B37940A0-307A-49FA-9AE7-DC71C6E21052}.Release|x64.Build.0 = Release|x64
+		{B37940A0-307A-49FA-9AE7-DC71C6E21052}.Release|x86.ActiveCfg = Release|Win32
+		{B37940A0-307A-49FA-9AE7-DC71C6E21052}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9CE71496-3763-43DD-BEE9-9AFF86BFBBAA}
+	EndGlobalSection
+EndGlobal
