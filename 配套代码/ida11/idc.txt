@@ -1,0 +1,366 @@
+def __warn_once_deprecated_proto_confusion(what, alternative):
+def _IDC_GetAttr(obj, attrmap, attroffs):
+def _IDC_SetAttr(obj, attrmap, attroffs, value):
+def has_value(F):     return ((F & FF_IVL) != 0)     # any defined value?
+def byte_value(F):
+def is_loaded(ea):
+def is_code(F):       return ((F & MS_CLS) == FF_CODE) # is code byte?
+def is_data(F):       return ((F & MS_CLS) == FF_DATA) # is data byte?
+def is_tail(F):       return ((F & MS_CLS) == FF_TAIL) # is tail byte?
+def is_unknown(F):    return ((F & MS_CLS) == FF_UNK)  # is unexplored byte?
+def is_head(F):       return ((F & FF_DATA) != 0)      # is start of code/data?
+def is_flow(F):       return ((F & FF_FLOW) != 0)
+def isExtra(F):      return ((F & FF_LINE) != 0)
+def isRef(F):        return ((F & FF_REF)  != 0)
+def hasName(F):      return ((F & FF_NAME) != 0)
+def hasUserName(F):  return ((F & FF_ANYNAME) == FF_NAME)
+def is_defarg0(F):    return ((F & MS_0TYPE) != FF_0VOID)
+def is_defarg1(F):    return ((F & MS_1TYPE) != FF_1VOID)
+def isDec0(F):       return ((F & MS_0TYPE) == FF_0NUMD)
+def isDec1(F):       return ((F & MS_1TYPE) == FF_1NUMD)
+def isHex0(F):       return ((F & MS_0TYPE) == FF_0NUMH)
+def isHex1(F):       return ((F & MS_1TYPE) == FF_1NUMH)
+def isOct0(F):       return ((F & MS_0TYPE) == FF_0NUMO)
+def isOct1(F):       return ((F & MS_1TYPE) == FF_1NUMO)
+def isBin0(F):       return ((F & MS_0TYPE) == FF_0NUMB)
+def isBin1(F):       return ((F & MS_1TYPE) == FF_1NUMB)
+def is_off0(F):       return ((F & MS_0TYPE) == FF_0OFF)
+def is_off1(F):       return ((F & MS_1TYPE) == FF_1OFF)
+def is_char0(F):      return ((F & MS_0TYPE) == FF_0CHAR)
+def is_char1(F):      return ((F & MS_1TYPE) == FF_1CHAR)
+def is_seg0(F):       return ((F & MS_0TYPE) == FF_0SEG)
+def is_seg1(F):       return ((F & MS_1TYPE) == FF_1SEG)
+def is_enum0(F):      return ((F & MS_0TYPE) == FF_0ENUM)
+def is_enum1(F):      return ((F & MS_1TYPE) == FF_1ENUM)
+def is_manual0(F):       return ((F & MS_0TYPE) == FF_0FOP)
+def is_manual1(F):       return ((F & MS_1TYPE) == FF_1FOP)
+def is_stroff0(F):    return ((F & MS_0TYPE) == FF_0STRO)
+def is_stroff1(F):    return ((F & MS_1TYPE) == FF_1STRO)
+def is_stkvar0(F):    return ((F & MS_0TYPE) == FF_0STK)
+def is_stkvar1(F):    return ((F & MS_1TYPE) == FF_1STK)
+def is_byte(F):     return (is_data(F) and (F & DT_TYPE) == FF_BYTE)
+def is_word(F):     return (is_data(F) and (F & DT_TYPE) == FF_WORD)
+def is_dword(F):     return (is_data(F) and (F & DT_TYPE) == FF_DWORD)
+def is_qword(F):     return (is_data(F) and (F & DT_TYPE) == FF_QWORD)
+def is_oword(F):     return (is_data(F) and (F & DT_TYPE) == FF_OWORD)
+def is_tbyte(F):     return (is_data(F) and (F & DT_TYPE) == FF_TBYTE)
+def is_float(F):    return (is_data(F) and (F & DT_TYPE) == FF_FLOAT)
+def is_double(F):   return (is_data(F) and (F & DT_TYPE) == FF_DOUBLE)
+def is_pack_real(F): return (is_data(F) and (F & DT_TYPE) == FF_PACKREAL)
+def is_strlit(F):    return (is_data(F) and (F & DT_TYPE) == FF_STRLIT)
+def is_struct(F):   return (is_data(F) and (F & DT_TYPE) == FF_STRUCT)
+def is_align(F):    return (is_data(F) and (F & DT_TYPE) == FF_ALIGN)
+def value_is_string(var): raise NotImplementedError("this function is not needed in Python")
+def value_is_long(var):   raise NotImplementedError("this function is not needed in Python")
+def value_is_float(var):  raise NotImplementedError("this function is not needed in Python")
+def value_is_func(var):   raise NotImplementedError("this function is not needed in Python")
+def value_is_pvoid(var):  raise NotImplementedError("this function is not needed in Python")
+def value_is_int64(var):  raise NotImplementedError("this function is not needed in Python")
+def to_ea(seg, off):
+def form(format, *args):
+def substr(s, x1, x2):
+def strstr(s1, s2):
+def strlen(s):
+def xtol(s):
+def atoa(ea):
+def ltoa(n, radix):
+def atol(s):
+def rotate_left(value, count, nbits, offset):
+def rotate_dword(x, count): return rotate_left(x, count, 32, 0)
+def rotate_word(x, count):  return rotate_left(x, count, 16, 0)
+def rotate_byte(x, count):  return rotate_left(x, count, 8, 0)
+def eval_idc(expr):
+def EVAL_FAILURE(code):
+def save_database(idbname, flags=0):
+def validate_idb_names(do_repair = 0):
+def call_system(command):
+def qsleep(milliseconds):
+def delete_all_segments():
+def plan_and_wait(sEA, eEA, final_pass=True):
+def set_name(ea, name, flags=ida_name.SN_CHECK):
+def make_array(ea, nitems):
+def create_strlit(ea, endea):
+def create_byte(ea):
+def create_word(ea):
+def create_dword(ea):
+def create_qword(ea):
+def create_oword(ea):
+def create_yword(ea):
+def create_float(ea):
+def create_double(ea):
+def create_pack_real(ea):
+def create_tbyte(ea):
+def create_struct(ea, size, strname):
+def define_local_var(start, end, location, name):
+def set_array_params(ea, flags, litems, align):
+def op_plain_offset(ea, n, base):
+def toggle_bnot(ea, n):
+def op_stroff(ea, n, strid, delta):
+def op_offset_high16(ea, n, target):
+def MakeVar(ea):
+def split_sreg_range(ea, reg, value, tag=SR_user):
+def AutoMark(ea,qtype):
+def gen_file(filetype, path, ea1, ea2, flags):
+def gen_flow_graph(outfile, title, ea1, ea2, flags):
+def gen_simple_call_chart(outfile, title, flags):
+def idadir():
+def get_idb_path():
+def get_bytes(ea, size, use_dbg = False):
+def __DbgValue(ea, len):
+def read_dbg_byte(ea):
+def read_dbg_word(ea):
+def read_dbg_dword(ea):
+def read_dbg_qword(ea):
+def write_dbg_memory(ea, data):
+def GetFloat(ea):
+def GetDouble(ea):
+def get_name_ea_simple(name):
+def get_segm_by_sel(base):
+def get_curline():
+def read_selection_start():
+def read_selection_end():
+def get_sreg(ea, reg):
+def next_head(ea, maxea=BADADDR):
+def prev_head(ea, minea=0):
+def get_item_size(ea):
+def func_contains(func_ea, ea):
+def get_name(ea, gtn_flags=0):
+def demangle_name(name, disable_mask):
+def generate_disasm_line(ea, flags):
+def GetDisasm(ea):
+def print_insn_mnem(ea):
+def print_operand(ea, n):
+def get_operand_type(ea, n):
+def get_operand_value(ea, n):
+def get_strlit_contents(ea, length = -1, strtype = STRTYPE_C):
+def get_str_type(ea):
+def find_text(ea, flag, y, x, searchstr):
+def find_binary(ea, flag, searchstr, radix=16):
+def process_config_line(directive):
+def _import_module_flag_sets(module, prefixes):
+def get_inf_attr(attr):
+def set_inf_attr(attr, value):
+def SetPrcsr(processor): return set_processor_type(processor, SETPROC_USER)
+def batch(batch):
+def process_ui_action(name, flags=0):
+def sel2para(sel):
+def find_selector(val):
+def get_first_seg():
+def get_next_seg(ea):
+def get_segm_start(ea):
+def get_segm_end(ea):
+def get_segm_name(ea):
+def add_segm_ex(startea, endea, base, use32, align, comb, flags):
+def AddSeg(startea, endea, base, use32, align, comb):
+def set_segment_bounds(ea, startea, endea, flags):
+def set_segm_name(ea, name):
+def set_segm_class(ea, segclass):
+def set_segm_alignment(ea, alignment):
+def set_segm_combination(segea, comb):
+def set_segm_addressing(ea, bitness):
+def selector_by_name(segname):
+def set_default_sreg_value(ea, reg, value):
+def set_segm_type(segea, segtype):
+def get_segm_attr(segea, attr):
+def set_segm_attr(segea, attr, value):
+def move_segm(ea, to, flags):
+def get_xref_type():
+def fopen(f, mode):
+def fclose(handle):
+def filelength(handle):
+def fseek(handle, offset, origin):
+def ftell(handle):
+def LoadFile(filepath, pos, ea, size):
+def loadfile(filepath, pos, ea, size): return LoadFile(filepath, pos, ea, size)
+def SaveFile(filepath, pos, ea, size):
+def savefile(filepath, pos, ea, size): return SaveFile(filepath, pos, ea, size)
+def fgetc(handle):
+def fputc(byte, handle):
+def fprintf(handle, format, *args):
+def readshort(handle, mostfirst):
+def readlong(handle, mostfirst):
+def writeshort(handle, word, mostfirst):
+def writelong(handle, dword, mostfirst):
+def readstr(handle):
+def writestr(handle, s):
+def get_next_func(ea):
+def get_prev_func(ea):
+def get_func_attr(ea, attr):
+def set_func_attr(ea, attr, value):
+def get_func_flags(ea):
+def set_func_flags(ea, flags):
+def get_func_name(ea):
+def get_func_cmt(ea, repeatable):
+def set_func_cmt(ea, cmt, repeatable):
+def choose_func(title):
+def get_func_off_str(ea):
+def find_func_end(ea):
+def get_frame_id(ea):
+def get_frame_lvar_size(ea):
+def get_frame_regs_size(ea):
+def get_frame_args_size(ea):
+def get_frame_size(ea):
+def set_frame_size(ea, lvsize, frregs, argsize):
+def get_spd(ea):
+def get_sp_delta(ea):
+def add_auto_stkpnt(func_ea, ea, delta):
+def del_stkpnt(func_ea, ea):
+def get_min_spd_ea(func_ea):
+def get_fixup_target_type(ea):
+def get_fixup_target_flags(ea):
+def get_fixup_target_sel(ea):
+def get_fixup_target_off(ea):
+def get_fixup_target_dis(ea):
+def set_fixup(ea, fixuptype, fixupflags, targetsel, targetoff, displ):
+def get_member_qty(sid):
+def get_member_id(sid, member_offset):
+def get_prev_offset(sid, offset):
+def get_next_offset(sid, offset):
+def get_first_member(sid):
+def get_last_member(sid):
+def get_member_offset(sid, member_name):
+def get_member_name(sid, member_offset):
+def get_member_cmt(sid, member_offset, repeatable):
+def get_member_size(sid, member_offset):
+def get_member_flag(sid, member_offset):
+def get_member_strid(sid, member_offset):
+def is_union(sid):
+def add_struc(index, name, is_union):
+def del_struc(sid):
+def set_struc_idx(sid, index):
+def add_struc_member(sid, name, offset, flag, typeid, nbytes, target=-1, tdelta=0, reftype=REF_OFF32):
+def del_struc_member(sid, member_offset):
+def set_member_name(sid, member_offset, name):
+def set_member_type(sid, member_offset, flag, typeid, nitems, target=-1, tdelta=0, reftype=REF_OFF32):
+def set_member_cmt(sid, member_offset, comment, repeatable):
+def expand_struc(sid, offset, delta, recalc):
+def get_fchunk_attr(ea, attr):
+def set_fchunk_attr(ea, attr, value):
+def get_next_fchunk(ea):
+def get_prev_fchunk(ea):
+def append_func_tail(funcea, ea1, ea2):
+def remove_fchunk(funcea, tailea):
+def set_tail_owner(tailea, funcea):
+def first_func_chunk(funcea):
+def next_func_chunk(funcea, tailea):
+def get_enum_member(enum_id, value, serial, bmask):
+def get_bmask_name(enum_id, bmask):
+def get_bmask_cmt(enum_id, bmask, repeatable):
+def set_bmask_name(enum_id, bmask, name):
+def set_bmask_cmt(enum_id, bmask, cmt, repeatable):
+def get_first_enum_member(enum_id, bmask):
+def get_last_enum_member(enum_id, bmask):
+def get_next_enum_member(enum_id, value, bmask):
+def get_prev_enum_member(enum_id, value, bmask):
+def get_enum_member_name(const_id):
+def get_enum_member_cmt(const_id, repeatable):
+def add_enum(idx, name, flag):
+def add_enum_member(enum_id, name, value, bmask):
+def del_enum_member(enum_id, value, serial, bmask):
+def __l2m1(v):
+    def rename(self, *args): return 0
+    def kill(self, *args): pass
+    def index(self, *args): return -1
+    def altset(self, *args): return 0
+    def supset(self, *args): return 0
+    def altval(self, *args): return 0
+    def supval(self, *args): return 0
+    def altdel(self, *args): return 0
+    def supdel(self, *args): return 0
+    def altfirst(self, *args): return -1
+    def supfirst(self, *args): return -1
+    def altlast(self, *args): return -1
+    def suplast(self, *args): return -1
+    def altnext(self, *args): return -1
+    def supnext(self, *args): return -1
+    def altprev(self, *args): return -1
+    def supprev(self, *args): return -1
+    def hashset(self, *args): return 0
+    def hashval(self, *args): return 0
+    def hashstr(self, *args): return 0
+    def hashstr_buf(self, *args): return 0
+    def hashset_idx(self, *args): return 0
+    def hashset_buf(self, *args): return 0
+    def hashval_long(self, *args): return 0
+    def hashdel(self, *args): return 0
+    def hashfirst(self, *args): return 0
+    def hashnext(self, *args): return 0
+    def hashprev(self, *args): return 0
+    def hashlast(self, *args): return 0
+def __GetArrayById(array_id):
+def create_array(name):
+def get_array_id(name):
+def rename_array(array_id, newname):
+def delete_array(array_id):
+def set_array_long(array_id, idx, value):
+def set_array_string(array_id, idx, value):
+def get_array_element(tag, array_id, idx):
+def del_array_element(tag, array_id, idx):
+def get_first_index(tag, array_id):
+def get_last_index(tag, array_id):
+def get_next_index(tag, array_id, idx):
+def get_prev_index(tag, array_id, idx):
+def set_hash_long(hash_id, key, value):
+def get_hash_long(hash_id, key):
+def set_hash_string(hash_id, key, value):
+def get_hash_string(hash_id, key):
+def del_hash_string(hash_id, key):
+def get_first_hash_key(hash_id):
+def get_last_hash_key(hash_id):
+def get_next_hash_key(hash_id, key):
+def get_prev_hash_key(hash_id, key):
+def add_default_til(name):
+def import_type(idx, type_name):
+def get_type(ea):
+def SizeOf(typestr):
+def get_tinfo(ea):
+def get_local_tinfo(ordinal):
+def guess_type(ea):
+def apply_type(ea, py_type, flags = TINFO_DEFINITE):
+def SetType(ea, newtype):
+def parse_decl(inputtype, flags):
+def parse_decls(inputtype, flags = 0):
+def print_decls(ordinals, flags):
+        def __init__(self):
+        def _print(self, defstr):
+def get_ordinal_qty():
+def set_local_type(ordinal, input, flags):
+def GetLocalType(ordinal, flags):
+def get_numbered_type_name(ordinal):
+def update_hidden_range(ea, visible):
+def _get_modules():
+def get_first_module():
+def get_next_module(base):
+def get_module_name(base):
+def get_module_size(base):
+def resume_process():
+def send_dbg_command(cmd):
+def get_event_id():
+def get_event_pid():
+def get_event_tid():
+def get_event_ea():
+def is_event_handled():
+def get_event_module_name():
+def get_event_module_base():
+def get_event_module_size():
+def get_event_exit_code():
+def get_event_info():
+def get_event_bpt_hea():
+def get_event_exc_code():
+def get_event_exc_ea():
+def can_exc_continue():
+def get_event_exc_info():
+def set_reg_value(value, name):
+def get_bpt_ea(n):
+def get_bpt_attr(ea, bptattr):
+def set_bpt_attr(address, bptattr, value):
+def set_bpt_cond(ea, cnd, is_lowcnd=0):
+def enable_tracing(trace_level, enable):
+def clear_trace(filename):
+def get_color(ea, what):
+def set_color(ea, what, color):
+def force_bl_jump(ea):
+def force_bl_call(ea):
+def set_flag(off, bit, value):
+def here(): return get_screen_ea()
+def is_mapped(ea): return (prev_addr(ea+1)==ea)

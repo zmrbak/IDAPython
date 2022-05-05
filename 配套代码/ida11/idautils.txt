@@ -1,0 +1,57 @@
+def refs(ea, funcfirst, funcnext):
+def CodeRefsTo(ea, flow):
+def CodeRefsFrom(ea, flow):
+def DataRefsTo(ea):
+def DataRefsFrom(ea):
+def XrefTypeName(typecode):
+def XrefsFrom(ea, flags=0):
+def XrefsTo(ea, flags=0):
+def Threads():
+def Heads(start=None, end=None):
+def Functions(start=None, end=None):
+def Chunks(start):
+def Modules():
+def Names():
+def Segments():
+def Entries():
+def FuncItems(start):
+def Structs():
+def StructMembers(sid):
+def DecodePrecedingInstruction(ea):
+def DecodePreviousInstruction(ea):
+def DecodeInstruction(ea):
+def GetDataList(ea, count, itemsize=1):
+def PutDataList(ea, datalist, itemsize=1):
+def MapDataList(ea, length, func, wordsize=1):
+def GetInputFileMD5():
+        def __init__(self, si):
+        def is_1_byte_encoding(self):
+        def _toseq(self, as_unicode):
+        def __str__(self):
+        def __unicode__(self):
+    def clear_cache(self):
+    def __init__(self, default_setup = False):
+    def refresh(self):
+    def setup(self,
+    def _get_item(self, index):
+    def __iter__(self):
+    def __getitem__(self, index):
+def GetIdbDir():
+def GetRegisterList():
+def GetInstructionList():
+def _Assemble(ea, line):
+def Assemble(ea, line):
+def _copy_obj(src, dest, skip_list = None):
+    def __init__(self, reg, dtype):
+    def __eq__(self, other):
+    def __getattr__(self, attr):
+    def __setattr__(self, attr, value):
+    def __getattr__(self, name):
+    def __setattr__(self, name, value):
+    def __init__(self, actions, flags = 0):
+    def __len__(self):
+    def __call__(self):
+def ProcessUiActions(actions, flags=0):
+    def __init__(self):
+    def __str__(self):
+    def header(self):
